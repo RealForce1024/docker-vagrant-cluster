@@ -29,6 +29,7 @@ Vagrant.configure(VAGRANTFILE_API_VERSION) do |config|
 		# 拷贝相应的依赖文件
 		config.vm.provision "file", source: "sshd_config", destination: "/home/vagrant/sshd_config"
 		config.vm.provision "file", source: "yum", destination: "/home/vagrant/yum"
+		config.vm.provision "file", source: "my.cnf", destination: "/home/vagrant/my.cnf"
 
 		# VirtaulBox相关配置
 		node.vm.provider "virtualbox" do |v|
